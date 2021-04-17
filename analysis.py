@@ -6,6 +6,11 @@
 
 #Import pandas
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+#seaborn as default style
+sns.set()
 
 col_names = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Species"]
 
@@ -22,10 +27,26 @@ sumSet = str(setosa.describe())
 sumVers = str(versicolor.describe())
 sumVirg = str(virginica.describe())
 
-summary = "Iris setosa\n"+ sumSet + "\n\n" + "Iris versicolor\n" + sumVers + "\n\n" + "Iris virginica\n" + sumVirg
 
+summary = "\t\t\tIris setosa\n"+ sumSet + "\n\n" + \
+        "\t\t\tIris versicolor\n" + sumVers + "\n\n" + \
+        "\t\t\tIris virginica\n" + sumVirg
+
+#species distribution
+#sees if species count is balanced or unbalanced
+sampleSize = str(iris.groupby("Species").size())
+
+#write summary of each variable to txt
+#included species distribution at the end 
 with open("summary.txt", "w") as f:
-        f.write(summary)
+        f.write(summary + "\n\n\t\t\tSample Distribution\n" + sampleSize)
 
+#histograms for each variable
+#differentiate species by color
+sns.FacetGrid(data = iris,hue = "Species").map(sns.histplot,"Petal Length").add_legend()
+sns.FacetGrid(data = iris,hue = "Species").map(sns.histplot,"Petal Width").add_legend()
+sns.FacetGrid(data = iris,hue = "Species").map(sns.histplot,"Sepal Length").add_legend()
+sns.FacetGrid(data = iris,hue = "Species").map(sns.histplot,"Sepal Width").add_legend()
 
+plt.show()
 

@@ -1,4 +1,4 @@
-Iris setosa
+			Iris setosa
        Sepal Length  Sepal Width  Petal Length  Petal Width
 count      50.00000    50.000000     50.000000     50.00000
 mean        5.00600     3.418000      1.464000      0.24400
@@ -9,7 +9,7 @@ min         4.30000     2.300000      1.000000      0.10000
 75%         5.20000     3.675000      1.575000      0.30000
 max         5.80000     4.400000      1.900000      0.60000
 
-Iris versicolor
+			Iris versicolor
        Sepal Length  Sepal Width  Petal Length  Petal Width
 count     50.000000    50.000000     50.000000    50.000000
 mean       5.936000     2.770000      4.260000     1.326000
@@ -20,7 +20,7 @@ min        4.900000     2.000000      3.000000     1.000000
 75%        6.300000     3.000000      4.600000     1.500000
 max        7.000000     3.400000      5.100000     1.800000
 
-Iris virginica
+			Iris virginica
        Sepal Length  Sepal Width  Petal Length  Petal Width
 count      50.00000    50.000000     50.000000     50.00000
 mean        6.58800     2.974000      5.552000      2.02600
@@ -30,3 +30,10 @@ min         4.90000     2.200000      4.500000      1.40000
 50%         6.50000     3.000000      5.550000      2.00000
 75%         6.90000     3.175000      5.875000      2.30000
 max         7.90000     3.800000      6.900000      2.50000
+
+			Sample Distribution
+Species
+Iris-setosa        50
+Iris-versicolor    50
+Iris-virginica     50
+dtype: int64

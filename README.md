@@ -4,11 +4,11 @@ Programming and Scripting (2021) - GMIT Data Analytics
 
 
 ## Summary
-Fisher's Iris data set records petal and sepal lenghts and widths in centimetres from 3 related Iris flower species (Iris setosa, Iris versicolor, and Iris virginica). It was first published in 1936 by the biologist and statistician Ronald Fischer, as part of his paper *The use of multiple measurements in taxonomic problems*. The data set contains a total of 150 samples, 50 of each flower species. Based on a linear combination of the 4 measured features (lenghts and widths of petals and sepals), Fischer developed a statistical method to distinguish between the 3 species of Iris. The data set is still widely used as a test case for machine learning techniques. 
+Fisher's Iris data set records petal and sepal lenghts and widths in centimetres from 3 related Iris flower species (Iris setosa, Iris versicolor, and Iris virginica). It was first published in 1936 by the biologist and statistician Ronald Fischer, as part of his paper *The use of multiple measurements in taxonomic problems* (available [here](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x)). The data set contains a total of 150 samples, 50 of each flower species. Based on a linear combination of the 4 measured features (lenghts and widths of petals and sepals), Fischer developed a statistical method to distinguish between the 3 species of Iris. The data set is still widely used as a test case for machine learning techniques. 
 
 
 ## Task
-Write a program (**analysis.py**) that reads Fisher's Iris data set, outputs the summary of each variable to a txt file, saves a histogram of each variable as png images, and outputs a scatter plot of each pair  of variables.
+Write a program (**analysis.py**) that reads Fisher's Iris data set, outputs the summary of each variable to a text file, saves a histogram of each variable as png images, and outputs a scatter plot of each pair of variables.
 
 ## Code
 
@@ -22,3 +22,16 @@ Write a program (**analysis.py**) that reads Fisher's Iris data set, outputs the
 
 - Iris Dataset: http://archive.ics.uci.edu/ml/datasets/Iris
 - CSV with PANDAS: https://realpython.com/python-csv/
+- [Fischer, R A: The use of multiple measurements in taxonomic problems](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x_)
+- Iris dataset methods of analysis: https://www.kaggle.com/kamrankausar/iris-dataset-ml-and-deep-learning-from-scratch
+- https://www.kaggle.com/kamrankausar/iris-dataset-ml-and-deep-learning-from-scratch
+- https://seaborn.pydata.org/tutorial/axis_grids.html
+- https://stackoverflow.com/questions/45721083/unable-to-plot-4-histograms-of-iris-dataset-features-using-matplotlib
+- https://stackoverflow.com/questions/38082602/plotting-multiple-different-plots-in-one-figure-using-seaborn
+- https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
+- https://seaborn.pydata.org/generated/seaborn.color_palette.html#seaborn.color_palette
+- https://seaborn.pydata.org/generated/seaborn.pairplot.html
+- https://seaborn.pydata.org/generated/seaborn.regplot.html
+- https://dev.to/thalesbruno/subplotting-with-matplotlib-and-seaborn-5ei8
+- https://www.kaggle.com/dcstang/how-to-do-subplots-iris-dataset
+- https://seaborn.pydata.org/generated/seaborn.histplot.html
