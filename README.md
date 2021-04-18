@@ -11,11 +11,48 @@ Fisher's Iris data set records petal and sepal lenghts and widths in centimetres
 Write a program (**analysis.py**) that reads Fisher's Iris data set, outputs the summary of each variable to a text file, saves a histogram of each variable as png images, and outputs a scatter plot of each pair of variables.
 
 ## Code
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
+sns.set()
+
+col_names = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Species"]
+
+iris = pd.read_csv("iris.data", header = None, names = col_names)
+
+setosa = iris[iris["Species"] == "Iris-setosa"]
+versicolor = iris[iris["Species"] == "Iris-versicolor"]
+virginica = iris[iris["Species"] == "Iris-virginica"]
+
+sumSet = str(setosa.describe())
+sumVers = str(versicolor.describe())
+sumVirg = str(virginica.describe())
+
+summary = "\t\t\tIris setosa\n"+ sumSet + "\n\n" + \
+        "\t\t\tIris versicolor\n" + sumVers + "\n\n" + \
+        "\t\t\tIris virginica\n" + sumVirg
+
+sampleSize = str(iris.groupby("Species").size())
+
+with open("summary.txt", "w") as f:
+        f.write(summary + "\n\n\t\t\tSample Distribution\n" + sampleSize)
+
+attributes = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width"]
+
+for attribute in attributes:
+    sns.FacetGrid(data = iris, hue = "Species").map(sns.histplot, attribute).add_legend()
+    plt.savefig("histplot_"+attribute +".png")
+    for pairAttribute in attributes:
+        sns.FacetGrid(data = iris, hue = "Species").map(sns.scatterplot, attribute, pairAttribute).add_legend()
+        plt.savefig("scatter_"+attribute+pairAttribute+".png")
+
+```
 
 
 ## Notes & Comments
-
+Comment on code and on possible alternative approaches.
 
 
 ## References
@@ -35,3 +72,4 @@ Write a program (**analysis.py**) that reads Fisher's Iris data set, outputs the
 - https://dev.to/thalesbruno/subplotting-with-matplotlib-and-seaborn-5ei8
 - https://www.kaggle.com/dcstang/how-to-do-subplots-iris-dataset
 - https://seaborn.pydata.org/generated/seaborn.histplot.html
+- https://seaborn.pydata.org/generated/seaborn.scatterplot.html
