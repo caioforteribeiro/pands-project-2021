@@ -48,5 +48,15 @@ sns.FacetGrid(data = iris,hue = "Species").map(sns.histplot,"Petal Width").add_l
 sns.FacetGrid(data = iris,hue = "Species").map(sns.histplot,"Sepal Length").add_legend()
 sns.FacetGrid(data = iris,hue = "Species").map(sns.histplot,"Sepal Width").add_legend()
 
+#scatterplots
+sns.FacetGrid(iris, hue = "Species").map(plt.scatter, "Sepal Length", "Sepal Width").add_legend()
+sns.FacetGrid(iris, hue = "Species").map(plt.scatter, "Petal Length", "Petal Width").add_legend()
+sns.FacetGrid(iris, hue = "Species").map(plt.scatter, "Sepal Length", "Petal Width").add_legend()
+sns.FacetGrid(iris, hue = "Species").map(plt.scatter, "Petal Length", "Sepal Width").add_legend()
+sns.FacetGrid(iris, hue = "Species").map(plt.scatter, "Sepal Length", "Petal Length").add_legend()
+sns.FacetGrid(iris, hue = "Species").map(plt.scatter, "Petal Width", "Sepal Width").add_legend()
+ 
+
 plt.show()
+
 
