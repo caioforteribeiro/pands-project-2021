@@ -49,10 +49,12 @@ for attribute in attributes:
     sns.FacetGrid(data = iris, hue = "Species").map(sns.histplot, attribute).add_legend()
     #Saves each histplot to png files
     plt.savefig("histplot_"+attribute +".png")
+    
     #Adds second attribute to be paired for scatterplots
     for pairAttribute in attributes:
         sns.FacetGrid(data = iris, hue = "Species").map(sns.scatterplot, attribute, pairAttribute).add_legend()
         #Saves scatterplots of each possible combination to png files
         plt.savefig("scatter_"+attribute+pairAttribute+".png")
+
 
 
