@@ -137,6 +137,8 @@ The same approach is repeated for the scatterplots, but since they require 2 arg
 
 <img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/scatter_Petal%20WidthSepal%20Width.png" alt = "Petal Width vs Sepal Width">
 
+## Discussion
+
 
 
 ## References
