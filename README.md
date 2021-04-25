@@ -1,6 +1,6 @@
 # Fisher's Iris data set
-Author: Caio Forte Ribeiro
-Programming and Scripting (2021) - GMIT Data Analytics
+- **Author:** Caio Forte Ribeiro
+- **Course:** Programming and Scripting (2021) - GMIT Data Analytics
 
 
 ## Summary
@@ -51,7 +51,7 @@ for attribute in attributes:
 ```
 
 
-## Explanaining the code
+## Explaining the code
 ### Importing libraries
 
 ```python
@@ -61,7 +61,7 @@ import seaborn as sns
 
 sns.set()
 ```
-For this projects, 3 libraries were used:
+For this project, 3 libraries were used:
 
 1. [pandas](https://pandas.pydata.org/): a library for data manipulation and data analysis in Python. In this project, `pandas`was used to read the original data set and store it in a dataframe.
 2. [matplotlib.pyplot](https://matplotlib.org/): matplotlib is an open source library for data visualization in Python, and `pyplot` is a useful matplotlib-based API with plotting functionalities similar to [Matlab](https://www.mathworks.com/products/matlab.html). In this project, `matplotlib.pyplot` was used to output (save) plots as image files (.png).
@@ -69,7 +69,7 @@ For this projects, 3 libraries were used:
 
 All imported libraries are included in the [Anaconda3 package](https://docs.anaconda.com/anaconda/). They can also be installed using `pip.install`(which is also included in Anaconda3). More information on `pip.install` can be found [here](https://pip.pypa.io/en/stable/cli/pip_install/).
 
-### Reading data set
+### Reading the data set
 
 ```python
 col_names = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Species"]
@@ -78,7 +78,7 @@ iris = pd.read_csv("iris.data", header = None, names = col_names)
 ``` 
 The [original data set](https://github.com/caioforteribeiro/pands-project-2021/blob/main/iris.data) featured only the data. Column headers were missing from the original file, so a `list` object (`col_names`) was created to store these headers and make it easier to manipulate the data. The data set was read as a csv file using `pandas.read_csv`, and `col_names` was passed as the array type value for the `names` attribute. This assigned the string values in the list as the names of the columns of the resulting dataframe (`iris`).
 
-### Writing summary in a txt file
+### Writing the summary in a text file
 
 ```python
 setosa = iris[iris["Species"] == "Iris-setosa"]
@@ -105,6 +105,38 @@ with open("summary.txt", "w") as f:
         f.write(summary + "\n\n\t\t\tSample Distribution\n" + sampleSize)
 ```
 To write the summaries of each species and some basic information on distribution (using `pandas.size()`) into a text file ([summary.txt](https://github.com/caioforteribeiro/pands-project-2021/blob/main/summary.txt)), `with open()` method was used in `w` (write) mode. Some basic formatting (`\n` and `\t`) was added to improve readability.
+
+### Plotting histograms and scatterplots
+```python
+attributes = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width"]
+
+for attribute in attributes:
+    sns.FacetGrid(data = iris, hue = "Species").map(sns.histplot, attribute).add_legend()
+    plt.savefig("histplot_"+attribute +".png")
+    for pairAttribute in attributes:
+        sns.FacetGrid(data = iris, hue = "Species").map(sns.scatterplot, attribute, pairAttribute).add_legend()
+        plt.savefig("scatter_"+attribute+pairAttribute+".png")
+```
+We start by calling out the list of attributes that will be plotted for each species. For both the histograms and the scatterplots, `seaborn.Facetgrid` class was used and the "Species" columns in the data set was set as the parameter for differenting hues. This approach allows us to plot selected data from all the three species into the same set of axes, by . It also facilitates visualization and allows us to get quick insights from the data distribution. A `for` statement was used to avoid unnecessary repetitions in the code and keep it concise. It basically iterates through the list of attributes, and generates a `seaborn.histplot`for each attribute, saving the resulting histograms in the current directory. 
+
+<img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/histplot_Petal%20Length.png" alt = "Petal Length">
+
+<img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/histplot_Petal%20Width.png" alt = "Petal Width">
+
+<img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/histplot_Sepal%20Length.png" alt = "Sepal Length">
+
+<img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/histplot_Sepal%20Width.png" alt = "Sepal Width">
+
+The same approach is repeated for the scatterplots, but since they require 2 arguments (an attribute and a pair attribute),another `for` statement was nested inside the first one to iterate through 2 attributes each time. Below are some examples of the generated plots (the full set of images can be found in the [repository](https://github.com/caioforteribeiro/pands-project-2021)):
+
+<img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/scatter_Petal%20LengthPetal%20Width.png" alt = "Petal Length vs Petal Width">
+
+<img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/scatter_Sepal%20LengthSepal%20Width.png" alt = "Sepal Length vs Sepal Width">
+
+<img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/scatter_Petal%20LengthSepal%20Width.png" alt = "Petal Length vs Sepal Width">
+
+<img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/scatter_Petal%20WidthSepal%20Width.png" alt = "Petal Width vs Sepal Width">
+
 
 
 ## References
