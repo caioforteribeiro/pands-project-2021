@@ -142,7 +142,21 @@ The same approach is repeated for the scatterplots, but since they require 2 arg
 ## Discussion
 There are several posssible approaches to the tasks required for this project. We could, for instance, have written a summary of the whole data set instead of having one for each species of flower. However, it wouldn't give us any useful insight of the flowers's attributes as statistical determinants for the observed species, so a discriminated summary was preferred. Information about distribution ("Sample size") was included only for additional clarity, as the `describe()` method already outputs the "count" of each data class. We could also have defined a function for reading and writing the summary into a text file, but this would add unnecessary lines to our code or would require a separate script for storing the function(s).
 
-For the histograms and scatterplots, a more efficient approach - and one which would give us the same amount of information but in a more concise way - 
+For the histograms and scatterplots, we could have used `seaborn.pairplot()` instead of looping with FacetGrids. The following lines of code would output a structured multiplot grid composed of scatterplots with histograms in the diagonal.
+
+```python
+sns.pairplot(iris, hue = "Species", diag_kind = "hist")
+plt.show()
+```
+
+Resulting image (also available [here](https://github.com/caioforteribeiro/pands-project-2021/blob/main/pairplot.png)):
+
+<img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/pairplot.png" alt = "Iris data set pairplot">
+
+We chose to use the FacetGrid method because we wanted to be able to break our code into smaller, self-contained tasks for the purpose of this exercise, and to follow what was asked in the project's description (output a summary, then a series of histograms, then a series of scatterplots). We acknowledge, however, that `seborn.pairplot` would be a more efficient approach and one which would give us the same amount of information in a more concise way.
+
+## Conclusion
+
 
 
 ## References
