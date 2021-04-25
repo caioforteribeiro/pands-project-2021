@@ -157,7 +157,7 @@ We chose to use the FacetGrid method because we wanted to be able to break our c
 
 ## Conclusion
 
-
+From the above histograms, we notice that sepal features (length and width) are not ideal for distinguishing the three species of iris flower. The sepal data is highly spread across the x-axis, and data from all three species overlap significantly. Petal features seem to be more useful for a univariate analysis (taking into account only one variable). Petal length and width of the *Iris setosa* is clearly distinguishable from the other two species. There's a small overlap of the petal data for *Iris versicolor* and *Iris virginica*, so a multivariate analysis can further refine the results and establish better predictions. This can be achieveed by plotting the data for all possible combinations of features (scatterplots). For good statistical predictions based on the observation of sepal features, they need to be analysed in conjuction with petal features.  A bi-variate analysis of petal width vs. petal lenght still provides the best prediction outcome.
 
 ## References
 
