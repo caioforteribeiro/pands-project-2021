@@ -161,22 +161,19 @@ From the above histograms, we notice that sepal features (length and width) are 
 
 ## References
 
-- Iris Dataset: http://archive.ics.uci.edu/ml/datasets/Iris
+- UCI Machine Learning Repository. [Iris Dataset](http://archive.ics.uci.edu/ml/datasets/Iris). Access on 25 Apr, 2021.
 - CSV with PANDAS: https://realpython.com/python-csv/
 - https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
-- [Fischer, R A: The use of multiple measurements in taxonomic problems](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x_)
-- Iris dataset methods of analysis: https://www.kaggle.com/kamrankausar/iris-dataset-ml-and-deep-learning-from-scratch
-- https://www.kaggle.com/kamrankausar/iris-dataset-ml-and-deep-learning-from-scratch
-- https://seaborn.pydata.org/tutorial/axis_grids.html
-- https://stackoverflow.com/questions/45721083/unable-to-plot-4-histograms-of-iris-dataset-features-using-matplotlib
-- https://stackoverflow.com/questions/38082602/plotting-multiple-different-plots-in-one-figure-using-seaborn
-- https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
-- https://seaborn.pydata.org/generated/seaborn.color_palette.html#seaborn.color_palette
-- https://seaborn.pydata.org/generated/seaborn.pairplot.html
-- https://seaborn.pydata.org/generated/seaborn.regplot.html
-- https://dev.to/thalesbruno/subplotting-with-matplotlib-and-seaborn-5ei8
-- https://www.kaggle.com/dcstang/how-to-do-subplots-iris-dataset
-- https://seaborn.pydata.org/generated/seaborn.histplot.html
-- https://seaborn.pydata.org/generated/seaborn.scatterplot.html
-- https://stackoverflow.com/questions/67150094/how-can-i-condense-a-series-of-seaborn-scatterplots-using-for-loops
-- https://seaborn.pydata.org/generated/seaborn.set.html
+- Fischer, R A. *The use of multiple measurements in taxonomic problems*. Annals of Eugenics. v. 7, 2. Sept, 1936. p.179-188. Available on https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x. Access on 25 Apr, 2021.
+- [Iris dataset ML and Deep Learning from Scratch](https://www.kaggle.com/kamrankausar/iris-dataset-ml-and-deep-learning-from-scratch).Kaggle. Access on 25 Apr, 2021.
+- Venkata Sai Reddy Avuluri. [Exploratory Data Analysis of IRIS Data Set Using Python](https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d). Medium. Access on 10 Apr, 2021.
+- [Building structured multi-plot grids](https://seaborn.pydata.org/tutorial/axis_grids.html). Seaborn Library. Access on 25 Apr, 2021.
+- [Plotting multiple histograms of Iris data set features using matplotlib](https://stackoverflow.com/questions/45721083/unable-to-plot-4-histograms-of-iris-dataset-features-using-matplotlib). Access on 17 Apr, 2021.
+- [Plotting multiple different plots in one figure using Seaborn](https://stackoverflow.com/questions/38082602/plotting-multiple-different-plots-in-one-figure-using-seaborn). Access on 17 Apr, 2021.
+- [How to do subplots - Iris Dataset](https://www.kaggle.com/dcstang/how-to-do-subplots-iris-dataset). Kaggle. Access on 25 Apr, 2021.
+- Thales Bruno. [Subplotting with matplotlib and seaborn](https://dev.to/thalesbruno/subplotting-with-matplotlib-and-seaborn-5ei8). DEV. Access on 25 April, 2021.
+- [seaborn.set](https://seaborn.pydata.org/generated/seaborn.set.html). Seaborn Library. Access on 25 Apr, 2021.
+- [seaborn.histplot](https://seaborn.pydata.org/generated/seaborn.histplot.html). Seaborn Library. Access on 25 Apr, 2021.
+- [seaborn.scatterplot](https://seaborn.pydata.org/generated/seaborn.scatterplot.html). Seaborn Library. Access on 25 Apr, 2021.
+- [seaborn.pairplot](https://seaborn.pydata.org/generated/seaborn.pairplot.html). Seaborn Library. Access on 25 Apr, 2021.
+- [Using for loops with FacetGrids to generate multiple scatterplots](https://stackoverflow.com/questions/67150094/how-can-i-condense-a-series-of-seaborn-scatterplots-using-for-loops). Stack Overflow. Question posted by the author on 18 Apr, 2021. Access on 25 Apr, 2021.
