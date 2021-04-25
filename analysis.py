@@ -42,6 +42,7 @@ with open("summary.txt", "w") as f:
         f.write(summary + "\n\n\t\t\tSample Distribution\n" + sampleSize)
 
 #Create list with only the measured attibrutes
+
 attributes = ["Sepal Length", "Sepal Width", "Petal Length", "Petal Width"]
 
 #Iterate through the list and create histplots for each attribute
@@ -55,6 +56,7 @@ for attribute in attributes:
         sns.FacetGrid(data = iris, hue = "Species").map(sns.scatterplot, attribute, pairAttribute).add_legend()
         #Saves scatterplots of each possible combination to png files
         plt.savefig("scatter_"+attribute+pairAttribute+".png")
+
 
 
 

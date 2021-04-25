@@ -1,6 +1,8 @@
 # Fisher's Iris data set
-- **Author:** Caio Forte Ribeiro
-- **Course:** Programming and Scripting (2021) - GMIT Data Analytics
+
+**Author:** Caio Forte Ribeiro
+
+**Course:** Programming and Scripting (2021) - GMIT Data Analytics
 
 
 ## Summary
@@ -117,7 +119,7 @@ for attribute in attributes:
         sns.FacetGrid(data = iris, hue = "Species").map(sns.scatterplot, attribute, pairAttribute).add_legend()
         plt.savefig("scatter_"+attribute+pairAttribute+".png")
 ```
-We start by calling out the list of attributes that will be plotted for each species. For both the histograms and the scatterplots, `seaborn.Facetgrid` class was used and the "Species" columns in the data set was set as the parameter for differenting hues. This approach allows us to plot selected data from all the three species into the same set of axes, by . It also facilitates visualization and allows us to get quick insights from the data distribution. A `for` statement was used to avoid unnecessary repetitions in the code and keep it concise. It basically iterates through the list of attributes, and generates a `seaborn.histplot`for each attribute, saving the resulting histograms in the current directory. 
+We start by calling out the list of attributes that will be plotted for each species. For both the histograms and the scatterplots, `seaborn.Facetgrid` class was used and the "Species" columns in the data set was set as the parameter for differenting hues. This approach allows us to plot selected data from all the three species into the same set of axes. It also facilitates visualization and allows us to get quick insights from the data distribution, as the species are easily distinguishable from each other by colour. A `for` statement was used to avoid unnecessary repetitions in the code and keep it concise. It basically iterates through the list of attributes, and generates a `seaborn.histplot`for each attribute, saving the resulting histograms in the current directory. 
 
 <img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/histplot_Petal%20Length.png" alt = "Petal Length">
 
@@ -138,7 +140,9 @@ The same approach is repeated for the scatterplots, but since they require 2 arg
 <img src = "https://github.com/caioforteribeiro/pands-project-2021/blob/main/scatter_Petal%20WidthSepal%20Width.png" alt = "Petal Width vs Sepal Width">
 
 ## Discussion
+There are several posssible approaches to the tasks required for this project. We could, for instance, have written a summary of the whole data set instead of having one for each species of flower. However, it wouldn't give us any useful insight of the flowers's attributes as statistical determinants for the observed species, so a discriminated summary was preferred. Information about distribution ("Sample size") was included only for additional clarity, as the `describe()` method already outputs the "count" of each data class. We could also have defined a function for reading and writing the summary into a text file, but this would add unnecessary lines to our code or would require a separate script for storing the function(s).
 
+For the histograms and scatterplots, a more efficient approach - and one which would give us the same amount of information but in a more concise way - 
 
 
 ## References
